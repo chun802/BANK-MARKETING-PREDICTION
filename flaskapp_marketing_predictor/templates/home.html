@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  body {
+    background-color: #eefefe; 
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  }
+  h1 {
+    color: #316117;
+    text-align: center;
+    padding-top: 20px;
+  }
+  p {
+    color: #316117;
+    text-align: center;
+    padding: 1px;
+    font-size: 16pt;
+  }
+</style>
+<title>Bank Marketing Success Prediction</title>
+</head>
+
+<body>
+  <h1>Bank Marketing Success Prediction</h1>
+  <p>Predict the probability of customer deposit</p>
+<br>
+  <form  method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      <table style="width:60%" align="center">
+      <tr>
+        <td><p>{{form.age.label}}<br>{{form.age}}</p></td>
+        <td><p>{{form.job.label}}<br>{{form.job}}</p></td>
+        <td><p>{{form.marital.label}} <br>{{form.marital}}</p></td>
+      </tr>
+      <tr>
+        <td><p>{{form.education.label}}<br>{{form.education}}</p></td>
+        <td><p>{{form.balance.label}}<br>{{form.balance}}</p></td>
+        <td><p>{{form.credit_default.label}}<br>{{form.credit_default}}</p></td>
+      </tr>
+      <tr>
+        <td><p>{{form.housing.label}} <br>{{form.housing}}</p></td>
+        <td><p>{{form.loan.label}} <br>{{form.loan}}</p></td>
+        <td><p>{{form.contact.label}} <br>{{form.contact}}</p></td>
+      </tr>
+      <tr>
+        <td><p>{{form.poutcome.label}} <br>{{form.poutcome}}</p></td>
+        <td><p>{{form.campaign.label}} <br>{{form.campaign}}</p></td>
+        <td><p>{{form.previous.label}} <br>{{form.previous}}</p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><p>{{ form.submit() }}</p></td>
+        <td>&nbsp;</td>
+      </tr>
+  </form>
+</body>
+</html>

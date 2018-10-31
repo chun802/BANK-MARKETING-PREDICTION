@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  body {
+    background-color: #eefefe; 
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  }
+  h1 {
+    color: #316117;
+    text-align: center;
+    padding-top: 20px;
+  }
+  p {
+    color: #316117;
+    text-align: center;
+    padding: 1px;
+    font-size: 16pt;
+  }
+</style>
+<title>Predicted Outcome</title>
+</head>
+
+<body align="center">
+  <h1>Predicted Outcome</h1>
+  <h1>Probability: <span style="color: blue">{{prediction}}</span> </h1>
+  <h1>Deposit? <span style="color: blue">{{prediction_bool}}</span> </h1>
+  <button onclick="goBack()">Go Back</button>
+
+  <script>
+  function goBack() {
+      window.history.back();
+  }
+  </script>
+</body>
+</html>
